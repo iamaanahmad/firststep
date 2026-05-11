@@ -16,5 +16,12 @@
     "@types/node": "^20.0.0",
     "prettier": "^3.0.0",
     "typescript": "^5.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "bufferutil",
+      "esbuild",
+      "utf-8-validate"
+    ]
   }
 }
