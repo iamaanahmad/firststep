@@ -1,0 +1,32 @@
+{
+  "name": "@firststep/sdk",
+  "version": "0.1.0",
+  "description": "FirstStep SDK - Guest mode, embedded wallets, and transaction sponsorship",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "echo 'TODO: add eslint'",
+    "test": "vitest run tests",
+    "clean": "node -e \"require('fs').rmSync('dist', {recursive:true, force:true})\""
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "jsdom": "^24.1.3",
+    "typescript": "^5.0.0",
+    "vitest": "^2.1.8"
+  },
+  "keywords": ["solana", "sdk", "guest-mode", "sponsorship", "onboarding"]
+}

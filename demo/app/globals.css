@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  color: #cbd5e1;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(139, 92, 246, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 75% 70%, rgba(59, 130, 246, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 60%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}

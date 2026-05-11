@@ -1,0 +1,22 @@
+[build]
+skip-lint = false
+
+[features]
+seeds = false
+init-if-needed = false
+
+[programs.devnet]
+firststep_sponsorship = "11111111111111111111111111111111"
+
+[programs.mainnet]
+firststep_sponsorship = "11111111111111111111111111111111"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "vitest"

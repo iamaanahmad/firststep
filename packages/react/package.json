@@ -1,0 +1,39 @@
+{
+  "name": "@firststep/react",
+  "version": "0.1.0",
+  "description": "FirstStep React hook and components",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "echo 'TODO: add eslint'",
+    "test": "echo 'TODO: add jest'",
+    "clean": "node -e \"require('fs').rmSync('dist', {recursive:true, force:true})\""
+  },
+  "dependencies": {
+    "@firststep/sdk": "workspace:*",
+    "@solana/web3.js": "^1.87.0",
+    "lucide-react": "^1.14.0",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}

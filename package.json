@@ -1,0 +1,20 @@
+{
+  "name": "firststep",
+  "version": "0.1.0",
+  "description": "Onboarding & Gas Sponsorship SDK for Solana dApps",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "dev": "pnpm --filter ./demo dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "clean": "pnpm -r --parallel clean",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,json,md}\" \"demo/**/*.{ts,tsx,json,md}\" \"programs/**/*.rs\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}

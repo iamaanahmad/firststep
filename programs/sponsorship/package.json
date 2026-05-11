@@ -1,0 +1,11 @@
+{
+  "name": "@firststep/programs-sponsorship",
+  "version": "0.1.0",
+  "description": "FirstStep sponsorship Anchor program",
+  "scripts": {
+    "build": "anchor build",
+    "deploy": "anchor deploy",
+    "test": "anchor test",
+    "clean": "anchor clean"
+  }
+}
