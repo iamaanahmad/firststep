@@ -1,6 +1,9 @@
 packages:
-  - 'packages/*'
-  - 'programs/*'
-  - 'demo'
+  - packages/*
+  - programs/*
+  - demo
+
+ignoredBuiltDependencies:
+  - esbuild
 
 shared-workspace-lockfile: true
