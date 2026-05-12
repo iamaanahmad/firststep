@@ -103,9 +103,12 @@ export default function Dashboard() {
               <Activity size={14} />
               Live onboarding telemetry
             </div>
-            <h1 style={{ margin: 0, fontSize: "clamp(2rem, 4vw, 3.25rem)" }}>
-              FirstStep Dashboard
-            </h1>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "8px" }}>
+              <img src="/FirstStepLogo.png" alt="FirstStep Logo" style={{ height: "48px" }} />
+              <h1 style={{ margin: 0, fontSize: "clamp(2rem, 4vw, 3.25rem)" }}>
+                Dashboard
+              </h1>
+            </div>
             <p style={{ margin: "10px 0 0", color: "#94a3b8", maxWidth: "68ch", lineHeight: 1.7 }}>
               Track guest mode adoption, wallet upgrades, sponsored transactions,
               and the exact points where users drop out of the funnel.

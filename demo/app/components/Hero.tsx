@@ -50,6 +50,12 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
       >
         {/* Header section */}
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
+          <img
+            src="/FirstStepLogo.png"
+            alt="FirstStep Logo"
+            style={{ height: "80px", marginBottom: "24px" }}
+          />
+          <br />
           <div
             style={{
               display: "inline-flex",
