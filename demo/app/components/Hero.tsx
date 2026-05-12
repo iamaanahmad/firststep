@@ -155,6 +155,7 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
             </button>
 
             <button
+              onClick={() => window.open("https://github.com/iamaanahmad/firststep", "_blank")}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
