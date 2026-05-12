@@ -9,6 +9,7 @@ export default function Home() {
   const [isInApp, setIsInApp] = useState(false);
   const firstStep = useFirstStep({
     appId: "demo-app-001",
+    devnet: true,
     sponsorPolicy: {
       maxTransactionsPerUser: 5,
       maxSpendPerUser: 100000,

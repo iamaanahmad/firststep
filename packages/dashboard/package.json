@@ -4,7 +4,7 @@
   "description": "FirstStep analytics dashboard",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm --filter \"@firststep/sdk\" build && next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "node -e \"require('fs').rmSync('.next', {recursive:true, force:true})\""
