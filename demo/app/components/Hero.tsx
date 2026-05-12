@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   BadgeCheck,
@@ -17,6 +18,29 @@ interface HeroProps {
   onTryAsGuest: () => Promise<void>;
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+    },
+  },
+};
+
 export default function Hero({ onTryAsGuest }: HeroProps) {
   return (
     <div
@@ -29,7 +53,16 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
       }}
     >
       {/* Animated background gradient */}
-      <div
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
         style={{
           position: "absolute",
           inset: 0,
@@ -40,7 +73,10 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
       />
 
       {/* Main container */}
-      <div
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
         style={{
           position: "relative",
           zIndex: 1,
@@ -50,13 +86,15 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
       >
         {/* Header section */}
         <div style={{ textAlign: "center", marginBottom: "60px" }}>
-          <img
+          <motion.img
+            variants={itemVariants}
             src="/FirstStepLogo.png"
             alt="FirstStep Logo"
-            style={{ height: "80px", marginBottom: "24px" }}
+            style={{ height: "100px", marginBottom: "24px", filter: "drop-shadow(0 0 20px rgba(139, 92, 246, 0.3))" }}
           />
           <br />
-          <div
+          <motion.div
+            variants={itemVariants}
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -75,9 +113,10 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
           >
             <Sparkles size={18} />
             The Future of Solana Onboarding
-          </div>
+          </motion.div>
 
-          <h1
+          <motion.h1
+            variants={itemVariants}
             style={{
               fontSize: "clamp(2.8rem, 8vw, 4.8rem)",
               lineHeight: 1.15,
@@ -94,9 +133,10 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
             }}
           >
             Onboard users instantly. No wallet required.
-          </h1>
+          </motion.h1>
 
-          <p
+          <motion.p
+            variants={itemVariants}
             style={{
               fontSize: "1.3rem",
               lineHeight: 1.7,
@@ -110,10 +150,11 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
             }}
           >
             FirstStep gives your dApp everything needed for frictionless onboarding—guest mode, embedded wallets, sponsored transactions, and analytics that show exactly where users drop off.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div
+          <motion.div
+            variants={itemVariants}
             style={{
               display: "flex",
               gap: "16px",
@@ -121,7 +162,9 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
               flexWrap: "wrap",
             }}
           >
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05, translateY: -3 }}
+              whileTap={{ scale: 0.95 }}
               onClick={onTryAsGuest}
               style={{
                 display: "inline-flex",
@@ -137,24 +180,18 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
                 borderRadius: "14px",
                 cursor: "pointer",
                 boxShadow: "0 20px 50px rgba(139, 92, 246, 0.35)",
-                transition: "all 0.3s ease",
+                transition: "box-shadow 0.3s ease",
                 letterSpacing: "0.5px",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-3px)";
-                e.currentTarget.style.boxShadow = "0 30px 60px rgba(139, 92, 246, 0.45)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 20px 50px rgba(139, 92, 246, 0.35)";
               }}
             >
               <Rocket size={20} />
               Try Live Demo
               <ArrowRight size={20} />
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05, backgroundColor: "rgba(139, 92, 246, 0.2)" }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => window.open("https://github.com/iamaanahmad/firststep", "_blank")}
               style={{
                 display: "inline-flex",
@@ -169,28 +206,19 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
                 borderRadius: "14px",
                 cursor: "pointer",
                 backdropFilter: "blur(10px)",
-                transition: "all 0.3s ease",
+                transition: "border-color 0.3s ease",
                 letterSpacing: "0.5px",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(139, 92, 246, 0.2)";
-                e.currentTarget.style.borderColor = "rgba(139, 92, 246, 0.7)";
-                e.currentTarget.style.boxShadow = "0 10px 30px rgba(139, 92, 246, 0.2)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(139, 92, 246, 0.12)";
-                e.currentTarget.style.borderColor = "rgba(139, 92, 246, 0.4)";
-                e.currentTarget.style.boxShadow = "none";
               }}
             >
               <Wallet size={20} />
               View Docs
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
 
         {/* Features Grid */}
-        <div
+        <motion.div
+          variants={containerVariants}
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -250,8 +278,10 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
           ].map((feature) => {
             const IconComponent = feature.icon;
             return (
-              <div
+              <motion.div
                 key={feature.title}
+                variants={itemVariants}
+                whileHover={{ y: -10, boxShadow: `0 20px 40px ${feature.color}20`, borderColor: feature.borderColor.replace("0.3", "0.6") }}
                 style={{
                   padding: "32px",
                   borderRadius: "16px",
@@ -260,18 +290,6 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
                   backdropFilter: "blur(10px)",
                   transition: "all 0.3s ease",
                   cursor: "pointer",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = feature.bgColor.replace("0.12", "0.2");
-                  e.currentTarget.style.borderColor = feature.borderColor.replace("0.3", "0.6");
-                  e.currentTarget.style.transform = "translateY(-6px)";
-                  e.currentTarget.style.boxShadow = `0 20px 40px ${feature.color}20`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = feature.bgColor;
-                  e.currentTarget.style.borderColor = feature.borderColor;
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
                 <div
@@ -309,13 +327,14 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
                 >
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Demo Section */}
-        <div
+        <motion.div
+          variants={itemVariants}
           style={{
             background: "linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(59, 130, 246, 0.08) 100%)",
             border: "1.5px solid rgba(139, 92, 246, 0.3)",
@@ -328,7 +347,7 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "56px",
               alignItems: "center",
             }}
@@ -398,8 +417,10 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
               </div>
             </div>
 
-            <div
+            <motion.div
+              whileHover={{ rotateY: 5, rotateX: 5 }}
               style={{
+                perspective: "1000px",
                 background: "linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.05) 100%)",
                 border: "1.5px solid rgba(139, 92, 246, 0.25)",
                 borderRadius: "20px",
@@ -455,8 +476,9 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
                   { label: "Step 2: Confirm Link", value: "Check your inbox", status: "✓", statusColor: "#10b981" },
                   { label: "Step 3: Start Using", value: "First 3-5 txs sponsored", status: "→", statusColor: "#8b5cf6" },
                 ].map((step) => (
-                  <div
+                  <motion.div
                     key={step.label}
+                    whileHover={{ x: 10, backgroundColor: "rgba(139, 92, 246, 0.15)", borderColor: "rgba(139, 92, 246, 0.4)" }}
                     style={{
                       padding: "18px",
                       background: "rgba(139, 92, 246, 0.08)",
@@ -467,14 +489,6 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
                       alignItems: "center",
                       transition: "all 0.3s ease",
                       cursor: "pointer",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "rgba(139, 92, 246, 0.15)";
-                      e.currentTarget.style.borderColor = "rgba(139, 92, 246, 0.4)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "rgba(139, 92, 246, 0.08)";
-                      e.currentTarget.style.borderColor = "rgba(139, 92, 246, 0.2)";
                     }}
                   >
                     <div>
@@ -494,13 +508,13 @@ export default function Hero({ onTryAsGuest }: HeroProps) {
                     >
                       {step.status}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

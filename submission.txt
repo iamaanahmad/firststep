@@ -1,0 +1,94 @@
+What happens after you submit?
+After submission, your project details will be locked for judging. A small set of fields will still be editable up until the submission deadline:
+
+Live product link
+Optional access instructions
+Anything else judges should know
+How far along are you? Do you have users?
+Entity formation
+Investment
+Fundraising
+Live token
+Submission Preview
+Edit project
+Step 1: Project Info
+Project name
+FirstStep
+Category
+Developer Infrastructure
+Brief description
+FirstStep is an open-source, plug-and-play SDK and analytics dashboard designed to eliminate Solana dApp onboarding friction. It equips developers with "guest mode" browsing, embedded social wallets, and sponsored first-time transactions to stop users from dropping off at the "Connect Wallet" step. It also includes a developer dashboard that tracks the onboarding funnel to pinpoint exactly where and why users churn.
+Project website
+https://firststep-demo.vercel.app/
+Mobile-focused dApp
+No
+What are you building, and who is it for?
+We are building FirstStep: an open-source, plug-and-play SDK and analytics platform designed to solve web3's massive onboarding friction. It is built for Solana dApp developers who want to convert non-crypto natives. FirstStep gives any dApp an out-of-the-box "Guest Mode" for browsing, embedded social wallets (email/Google) for seamless bridging, and sponsored first transactions. Accompanying the SDK is a granular developer dashboard that tracks the onboarding funnel to pinpoint exactly where users drop off and gives actionable UX recommendations to fix it.
+Why did you decide to build this, and why build it now?
+Industry data shows that roughly 70% of new users abandon web3 apps at the "Connect Wallet" stage before experiencing any core value. The second biggest churn point is forcing users to acquire SOL just to try a free app. While Solana has solved scalability and fee costs on the protocol level, the application-layer UX is still the primary bottleneck. Right now, consumer dApps are forced to rebuild the same custom infrastructure for guest modes, custodial wallets, and gas sponsorships. We built FirstStep because developers need standard, opinionated infrastructure to fix this funnel immediately.
+What technologies are you using or integrating with to build your product?
+Smart Contracts: Rust and Anchor framework for the on-chain sponsorship allowance and tracking logic. Frontend & Dashboard: Next.js (App Router), React, and Tailwind CSS. SDK: TypeScript, heavily integrating with @solana/web3.js and standard wallet adapters (like Phantom). Testing & Tooling: Vitest for SDK integration testing, pnpm workspaces for monorepo management.
+Step 2: Media and Code
+Project logo
+Project logo or graphic
+FirstStep.png
+GitHub link
+https://github.com/iamaanahmad/firststep
+Product demo video
+https://www.youtube.com/watch?v=9ZXz9iVlpjsw
+Demo video visibility
+Judges only
+Pitch video
+https://www.youtube.com/watch?v=3GV79iejs
+Live product link
+https://firststep-demo.vercel.app/
+Access instructions
+—
+Important GitHub repo context
+—
+Step 3: Team
+Where is your team primarily based?
+India
+Team members
+Amaan Ahmad
+Team Telegram contact
+iamaanshaikh
+X profile
+i_amaanahmad
+Accelerator application
+Applying
+Did anyone not listed on the team do meaningful work on this project?
+—
+Anything else judges should know about your project?
+FirstStep isn't just an embedded wallet—it's an analytics-first onboarding engine. The true value lies in the dashboard loop: the SDK tracks canonical funnel events (landing -> feature click -> wallet connect -> tx sign -> success), sending them to the dashboard. The dashboard then generates plain-language, actionable recommendations (e.g., "70% of users quit at wallet connect on this page, enable Guest Mode here" or "Most tx failures are 'insufficient SOL', sponsor the first 3 txs").
+Step 4: Accelerator
+How do you know people actually need, or will need this product?
+If you talk to any founder building a consumer application on Solana (gaming, social, DePIN), their number one complaint is user acquisition and the wallet-connect drop-off cliff. Web2 users are accustomed to "try before you buy" experiences. Forcing them to install a browser extension, store a 12-word seed phrase, and KYC on a centralized exchange just to click "Like" on a decentralized social app is fundamentally broken. By tracking drop-off metrics across the ecosystem, the demand for "invisible web3" infrastructure is clear. FirstStep provides exactly what these teams are spending months building in-house.
+How far along are you? Do you have users? Please be as specific as possible.
+We are currently at the MVP/prototype stage, built specifically for this hackathon. We have successfully developed a fully functional monorepo containing:
+
+The core TypeScript SDK capable of generating ephemeral guest wallets, integrating Phantom, and validating sponsor eligibility.
+The Anchor smart contract for on-chain sponsorship tracking.
+The developer analytics dashboard that tracks real-time onboarding funnel events.
+A Next.js demo dApp utilizing the SDK.
+We do not currently have production users, as the core focus has been proving out the infrastructure, SDK developer experience, and the analytics loop.
+Who else is building in this space, and what do you think they're getting wrong?
+There are excellent general-purpose Wallet-as-a-Service (WaaS) providers like Privy, Web3Auth, and Dynamic. However, they are generic modular pieces, not opinionated funnels. They give you the auth keys, but they leave to the developer the heavy lifting of figuring out when to prompt the user, how to sponsor their gas on Solana seamlessly, and how to track where the user gave up. FirstStep differentiates itself by being Solana-native, heavily opinionated about UX (providing out-of-the-box "Guest Mode" logic), and analytics-first. We don't just provide the wallet; we provide the funnel analytics to prove it's working.
+How do you make money, or how do you plan to?
+Our planned revenue model is a B2B SaaS platform for developers:
+
+Free Tier: Core open-source SDK, standard embedded wallets, and basic funnel analytics.
+Pro Tier (SaaS): Monthly subscription for advanced analytics, custom-branded embedded wallets, and actionable UX insights.
+Usage-based API: A small margin taken on top of our Gas Sponsorship Relayer service (simplifying on-chain fee sponsorship for cross-platform developers).
+How long have you each been working on this? Have you been working on it full time?
+I have been working on FirstStep part-time specifically for the Colosseum hackathon over the last several weeks, dedicating nights and weekends to architecting the SDK, metrics dashboard, and Solana programs.
+Where is each member of the team currently based, and do you work in-person together?
+I am a solo founder based in New Delhi, India
+Have you formed a legal entity yet?
+No
+Have you taken any investment yet?
+No
+Are you currently fundraising?
+No
+Do you have a live token?
+No
