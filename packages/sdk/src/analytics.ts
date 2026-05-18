@@ -80,12 +80,12 @@ export class Analytics {
       });
 
       if (!response.ok) {
-        console.error("Failed to send analytics events:", response.statusText);
+        console.warn(`Analytics endpoint returned ${response.status}. Events queued for retry.`);
         // Re-add events to batch for retry (simple retry logic)
         this.eventBatch.push(...eventsToSend.slice(0, 5)); // Keep last 5 for retry
       }
     } catch (error) {
-      console.error("Error sending analytics events:", error);
+      console.warn("Analytics endpoint unreachable. Events queued for retry.");
       // Re-add events for retry
       this.eventBatch.push(...eventsToSend.slice(0, 5));
     }

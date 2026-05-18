@@ -12,3 +12,9 @@ target/
 
 .data/
 packages/dashboard/.data/
+
+# Internal guides and logs
+plan.txt
+submission.txt
+logs.txt
+codex-session.jsonl

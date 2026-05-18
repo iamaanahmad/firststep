@@ -1,9 +1,9 @@
 Failed to load resource: net::ERR_CONNECTION_REFUSED
 651-d887566883ae348b.js:1 Error sending analytics events: TypeError: Failed to fetch
-    at u.flush (page-87d4762a6236d37b.js:1:5583)
-    at u.forceFlush (page-87d4762a6236d37b.js:1:6055)
-    at h.flushAnalytics (page-87d4762a6236d37b.js:1:10210)
-    at page-87d4762a6236d37b.js:1:43181
+    at u.flush (page-d9dff0fd3e27e038.js:1:5583)
+    at u.forceFlush (page-d9dff0fd3e27e038.js:1:6055)
+    at h.flushAnalytics (page-d9dff0fd3e27e038.js:1:10210)
+    at page-d9dff0fd3e27e038.js:1:43496
 window.console.error @ 651-d887566883ae348b.js:1
 api.devnet.solana.com/:1  Failed to load resource: the server responded with a status of 429 ()
 651-d887566883ae348b.js:1 Server responded with 429 .  Retrying after 500ms delay...
@@ -18,18 +18,10 @@ api.devnet.solana.com/:1  Failed to load resource: the server responded with a s
 651-d887566883ae348b.js:1 Server responded with 429 .  Retrying after 4000ms delay...
 window.console.error @ 651-d887566883ae348b.js:1
 api.devnet.solana.com/:1  Failed to load resource: the server responded with a status of 429 ()
-page-87d4762a6236d37b.js:1 Failed to fund guest wallet on devnet: Error: 429 :  {"jsonrpc":"2.0","error":{"code": 429, "message":"You've either reached your airdrop limit today or the airdrop faucet has run dry. Please visit https://faucet.solana.com for alternate sources of test SOL"}, "id": "4cff40df-b0fb-45e8-8f7f-04fd62eed5e8" } 
+page-d9dff0fd3e27e038.js:1 Failed to fund guest wallet on devnet: Error: 429 :  {"jsonrpc":"2.0","error":{"code": 429, "message":"You've either reached your airdrop limit today or the airdrop faucet has run dry. Please visit https://faucet.solana.com for alternate sources of test SOL"}, "id": "d5a61992-8ec7-4a8d-8ca2-53ae14382b25" } 
 
     at o.callServer (b731b60c-99b2127789829a34.js:7:28608)
-_fundGuestWallet @ page-87d4762a6236d37b.js:1
-page-87d4762a6236d37b.js:1  POST http://localhost:3001/api/events net::ERR_CONNECTION_REFUSED
-
-uM @ 90f62467-8654ccdcf10c655f.js:1
-651-d887566883ae348b.js:1 Error sending analytics events: TypeError: Failed to fetch
-page-87d4762a6236d37b.js:1  POST http://localhost:3001/api/events net::ERR_CONNECTION_REFUSED
-651-d887566883ae348b.js:1 Error sending analytics events: TypeError: Failed to fetch
-  
-
+_fundGuestWallet @ page-d9dff0fd3e27e038.js:1
 651-d887566883ae348b.js:1 Failed to send transaction: er: Simulation failed. 
 Message: Transaction simulation failed: Attempt to debit an account but found no record of a prior credit.. 
 Logs: 
@@ -37,15 +29,16 @@ Logs:
 Catch the `SendTransactionError` and call `getLogs()` on it for full details.
     at t4.sendEncodedTransaction (b731b60c-99b2127789829a34.js:7:57148)
     at async t4.sendRawTransaction (b731b60c-99b2127789829a34.js:7:56661)
-    at async l.sendTransaction (page-87d4762a6236d37b.js:1:2155)
-    at async h.sendTransaction (page-87d4762a6236d37b.js:1:7947)
-    at async Object.sendTransaction (page-87d4762a6236d37b.js:1:43567)
-    at async h (page-87d4762a6236d37b.js:1:32990)
-localhost:3001/api/events:1 
- Failed to load resource: net::ERR_CONNECTION_REFUSED
+    at async l.sendTransaction (page-d9dff0fd3e27e038.js:1:2155)
+    at async h.sendTransaction (page-d9dff0fd3e27e038.js:1:7947)
+    at async Object.sendTransaction (page-d9dff0fd3e27e038.js:1:43882)
+    at async h (page-d9dff0fd3e27e038.js:1:33037)
+window.console.error @ 651-d887566883ae348b.js:1
+localhost:3001/api/events:1  Failed to load resource: net::ERR_CONNECTION_REFUSED
 651-d887566883ae348b.js:1 Error sending analytics events: TypeError: Failed to fetch
-    at u.flush (page-87d4762a6236d37b.js:1:5583)
-    at u.forceFlush (page-87d4762a6236d37b.js:1:6055)
-    at h.flushAnalytics (page-87d4762a6236d37b.js:1:10210)
-    at Object.sendTransaction (page-87d4762a6236d37b.js:1:43665)
-    at async h (page-87d4762a6236d37b.js:1:32990)
+
+Failed to send transaction: er: Simulation failed. 
+Message: Transaction simulation failed: Attempt to debit an account but found no record of a prior credit.. 
+Logs: 
+[]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.

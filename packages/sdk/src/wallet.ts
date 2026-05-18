@@ -106,7 +106,6 @@ export class CustodialWallet extends BaseWallet {
       await connection.confirmTransaction(signature, "confirmed");
       return signature;
     } catch (error) {
-      console.error("Failed to send transaction:", error);
       throw error;
     }
   }
