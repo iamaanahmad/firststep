@@ -6,10 +6,10 @@ seeds = false
 init-if-needed = false
 
 [programs.devnet]
-firststep_sponsorship = "11111111111111111111111111111111"
+firststep_sponsorship = "7SJc8nfkddM7uFZJZuAkkM2NBsM7EbCGfD5LPXyYwJ1D"
 
 [programs.mainnet]
-firststep_sponsorship = "11111111111111111111111111111111"
+firststep_sponsorship = "7SJc8nfkddM7uFZJZuAkkM2NBsM7EbCGfD5LPXyYwJ1D"
 
 [registry]
 url = "https://api.apr.dev"

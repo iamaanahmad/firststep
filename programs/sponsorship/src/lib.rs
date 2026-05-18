@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::TokenAccount;
 
-declare_id!("11111111111111111111111111111111");
+declare_id!("7SJc8nfkddM7uFZJZuAkkM2NBsM7EbCGfD5LPXyYwJ1D");
 
 #[program]
 pub mod firststep_sponsorship {

@@ -8,9 +8,17 @@
 
 FirstStep is a plug-and-play React SDK designed to solve the **Connect Wallet Churn** problem. By providing instant guest modes, gas-sponsored first transactions, and a rich funnel analytics dashboard, FirstStep ensures users can experience your dApp before they ever hit a friction point.
 
-> **Status**: Hackathon MVP (Devnet-ready)  
+> **Status**: Live on Devnet & NPM (Hackathon MVP)  
 > **Last Updated**: May 2026  
 > **Documentation**: See [DOCUMENTATION.md](DOCUMENTATION.md) for full SDK usage and architecture.
+
+---
+
+## 🔗 Live Deployments & Links
+
+* **Devnet Smart Contract**: `7SJc8nfkddM7uFZJZuAkkM2NBsM7EbCGfD5LPXyYwJ1D`
+* **NPM Package (SDK)**: [npmjs.com/package/@firststep-solana/sdk](https://www.npmjs.com/package/@firststep-solana/sdk)
+* **NPM Package (React)**: [npmjs.com/package/@firststep-solana/react](https://www.npmjs.com/package/@firststep-solana/react)
 
 ---
 
