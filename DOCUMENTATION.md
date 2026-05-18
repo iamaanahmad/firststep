@@ -70,8 +70,8 @@ pnpm dev --filter dashboard
 The core entry point for the SDK is the `useFirstStep` hook. 
 
 ```typescript
-import { useFirstStep } from "@firststep/react";
-import { GuestModeBanner, GasSponsoredBadge } from "@firststep/react";
+import { useFirstStep } from "@firststep-solana/react";
+import { GuestModeBanner, GasSponsoredBadge } from "@firststep-solana/react";
 import { Transaction } from "@solana/web3.js";
 
 export function MyApp() {

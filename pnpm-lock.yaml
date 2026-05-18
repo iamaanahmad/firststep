@@ -20,10 +20,10 @@ importers:
 
   demo:
     dependencies:
-      '@firststep/react':
+      '@firststep-solana/react':
         specifier: workspace:*
         version: link:../packages/react
-      '@firststep/sdk':
+      '@firststep-solana/sdk':
         specifier: workspace:*
         version: link:../packages/sdk
       '@solana/web3.js':
@@ -60,7 +60,7 @@ importers:
 
   packages/dashboard:
     dependencies:
-      '@firststep/sdk':
+      '@firststep-solana/sdk':
         specifier: workspace:*
         version: link:../sdk
       lucide-react:
@@ -91,7 +91,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@firststep/sdk':
+      '@firststep-solana/sdk':
         specifier: workspace:*
         version: link:../sdk
       '@solana/web3.js':

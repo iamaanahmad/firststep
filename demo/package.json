@@ -1,17 +1,17 @@
 {
-  "name": "@firststep/demo",
+  "name": "@firststep-solana/demo",
   "version": "0.1.0",
   "description": "FirstStep demo dApp",
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm --filter \"@firststep/react\" --filter \"@firststep/sdk\" build && next build",
+    "build": "pnpm --filter \"@firststep-solana/react\" --filter \"@firststep-solana/sdk\" build && next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "node -e \"require('fs').rmSync('.next', {recursive:true, force:true})\""
   },
   "dependencies": {
-    "@firststep/react": "workspace:*",
-    "@firststep/sdk": "workspace:*",
+    "@firststep-solana/react": "workspace:*",
+    "@firststep-solana/sdk": "workspace:*",
     "@solana/web3.js": "^1.87.0",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.14.0",

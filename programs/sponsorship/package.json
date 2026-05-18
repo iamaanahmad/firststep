@@ -1,5 +1,5 @@
 {
-  "name": "@firststep/programs-sponsorship",
+  "name": "@firststep-solana/programs-sponsorship",
   "version": "0.1.0",
   "description": "FirstStep sponsorship Anchor program",
   "scripts": {

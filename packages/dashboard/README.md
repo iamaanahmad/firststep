@@ -1,4 +1,4 @@
-# @firststep/dashboard
+# @firststep-solana/dashboard
 
 Analytics dashboard for FirstStep onboarding metrics.
 

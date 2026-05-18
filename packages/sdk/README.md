@@ -1,4 +1,4 @@
-# @firststep/sdk
+# @firststep-solana/sdk
 
 Core SDK library for FirstStep onboarding platform.
 
@@ -12,13 +12,13 @@ Core SDK library for FirstStep onboarding platform.
 ## Installation
 
 ```bash
-pnpm add @firststep/sdk
+pnpm add @firststep-solana/sdk
 ```
 
 ## Usage
 
 ```typescript
-import { FirstStepSDK } from "@firststep/sdk";
+import { FirstStepSDK } from "@firststep-solana/sdk";
 
 const sdk = new FirstStepSDK({
   appId: "my-app",

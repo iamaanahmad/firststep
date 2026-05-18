@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useFirstStep } from "@firststep/react";
+import { useFirstStep } from "@firststep-solana/react";
 import Hero from "./components/Hero";
 import AppPage from "./components/AppPage";
 

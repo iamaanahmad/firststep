@@ -1,4 +1,4 @@
-# @firststep/react
+# @firststep-solana/react
 
 React hooks and components for FirstStep SDK integration.
 
@@ -11,13 +11,13 @@ React hooks and components for FirstStep SDK integration.
 ## Installation
 
 ```bash
-pnpm add @firststep/react
+pnpm add @firststep-solana/react
 ```
 
 ## Usage
 
 ```typescript
-import { useFirstStep } from "@firststep/react";
+import { useFirstStep } from "@firststep-solana/react";
 
 function MyApp() {
   const { isGuest, sendTransaction } = useFirstStep({

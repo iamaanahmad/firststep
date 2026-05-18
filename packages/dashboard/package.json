@@ -1,16 +1,16 @@
 {
-  "name": "@firststep/dashboard",
+  "name": "@firststep-solana/dashboard",
   "version": "0.1.0",
   "description": "FirstStep analytics dashboard",
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm --filter \"@firststep/sdk\" build && next build",
+    "build": "pnpm --filter \"@firststep-solana/sdk\" build && next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "node -e \"require('fs').rmSync('.next', {recursive:true, force:true})\""
   },
   "dependencies": {
-    "@firststep/sdk": "workspace:*",
+    "@firststep-solana/sdk": "workspace:*",
     "lucide-react": "^1.14.0",
     "next": "^14.0.0",
     "react": "^18.0.0",

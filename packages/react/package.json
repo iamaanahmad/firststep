@@ -1,5 +1,5 @@
 {
-  "name": "@firststep/react",
+  "name": "@firststep-solana/react",
   "version": "0.1.0",
   "description": "FirstStep React hook and components",
   "main": "./dist/index.js",
@@ -23,7 +23,7 @@
     "clean": "node -e \"require('fs').rmSync('dist', {recursive:true, force:true})\""
   },
   "dependencies": {
-    "@firststep/sdk": "workspace:*",
+    "@firststep-solana/sdk": "workspace:*",
     "@solana/web3.js": "^1.87.0",
     "lucide-react": "^1.14.0",
     "react": "^18.0.0"

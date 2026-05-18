@@ -5,7 +5,7 @@ import {
   FirstStepConfig,
   TransactionResult,
   GuestSession,
-} from "@firststep/sdk";
+} from "@firststep-solana/sdk";
 import { Transaction } from "@solana/web3.js";
 
 export interface UseFirstStepReturn {

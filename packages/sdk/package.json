@@ -1,5 +1,5 @@
 {
-  "name": "@firststep/sdk",
+  "name": "@firststep-solana/sdk",
   "version": "0.1.0",
   "description": "FirstStep SDK - Guest mode, embedded wallets, and transaction sponsorship",
   "main": "./dist/index.js",

@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { UseFirstStepReturn } from "@firststep/react";
+import { UseFirstStepReturn } from "@firststep-solana/react";
 import {
   GuestModeBanner,
   GasSponsoredBadge,
   UpgradeModal,
-} from "@firststep/react";
+} from "@firststep-solana/react";
 import { Transaction, SystemProgram, PublicKey } from "@solana/web3.js";
 import {
   ArrowRight,
