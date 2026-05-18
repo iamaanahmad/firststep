@@ -69,7 +69,9 @@ export default function AppPage({ firstStep }: AppPageProps) {
         fromPubkey: new PublicKey(
           firstStep.walletPublicKey || firstStep.guestSession?.publicKey || ""
         ),
-        toPubkey: new PublicKey("11111111111111111111111111111111"),
+        toPubkey: new PublicKey(
+          firstStep.walletPublicKey || firstStep.guestSession?.publicKey || ""
+        ),
         lamports: 1000,
       })
     );
